@@ -16,7 +16,7 @@ public class Main{
     static final double COEFFICIENT = 5.6;
 
     public static void main(String[] args){
-
+        
         /* Since we're going to be needing a and b over again, let's get them
         from a function in the Helpers class */
         int[] unstableParameters = Helpers.randomArr();
@@ -24,15 +24,14 @@ public class Main{
 
         /* I would like to dinamically determine the name of the property I'm introducing
         in the printProperty method, but I can't figure out how :( */
-
         double mass = Properties.getMass(unstableParameters[0], unstableParameters[1], COEFFICIENT);
-        Properties.printProperty("mass", mass);
+        Properties.printMass(mass);
         double perimeter = Properties.getPerimeter(unstableParameters[0], unstableParameters[1]);
-        Properties.printProperty("perimeter", perimeter);
+        Properties.printPerimeter(perimeter);
         double volume = Properties.getVolume(unstableParameters[0], unstableParameters[1], COEFFICIENT);
-        Properties.printProperty("volume", volume);
+        Properties.printVolume(volume);
         double area = Properties.getArea(unstableParameters[0], unstableParameters[1]);
-        Properties.printProperty("area", area);  
+        Properties.printArea(area);  
         }
 
 }
